@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Question</title>
+</head>
+
+<body>
+    <h2>Arrays.map()</h2>
+    <code>
+        const albumSalesStrings = musicData.map(<br>
+        &nbsp;&nbsp; (album) => `${album.name} by ${album.artist} sold ${album.sales} copies` <br>
+);
+    </code>
+    <p id="demo"></p>
+
+    <h2>Arrays.filter()</h2>
+    <code>
+        const results = musicData.filter( <br>
+        &nbsp;&nbsp; (album) => album.name.length <= 25 && album.name.length >= 10 <br>
+);
+    </code>
+    <p id="demoFilter"></p>
+
+    <h2>Arrays.filter().map()</h2>
+    <code>
+        const popular = musicData <br>&nbsp;
+        &nbsp;&nbsp; .filter(album => album.sales > 1000000)<br>
+        &nbsp;&nbsp; &nbsp; .map(album => `${album.artist} is a great performer`<br>);<br>
+    </code>
+    <p id="demoFilterMap"></p>
+
+    <script src="map.js"></script>
+    <script src="filters.js"></script>
+    <script src="map-filter.js"></script>
+    <script>
+        const strings = ["David", "Richard", "Karen", "Amanda", "7"];
+
+        const resultStrings = name
+            .filter(string.length < 6)
+            .map((string) => string.length);
+
+        console.log(resultStrings)
+    </script>
+</body>
+
+</html>
